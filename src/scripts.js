@@ -1,7 +1,9 @@
-import module from './_module';
-import './styles.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Container from './components/Container';
+import './common.css';
 
-window.onload = () => {
-  console.log('Hola mundo');
-  module();
-};
+ReactDOM.render(
+  <Container />,
+  document.getElementById('app')
+);

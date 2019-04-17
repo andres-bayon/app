@@ -4,10 +4,14 @@ module.exports = {
   entry: './src/scripts.js',
   output: {
     filename: 'scripts.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist')
   },
   module: {
     rules: [{
+      test: /\.(js|jsx)$/,
+      use: 'babel-loader',
+      exclude: /node_modules/,
+    }, {
       test: /\.css$/,
       use: [
         'style-loader',
@@ -16,8 +20,11 @@ module.exports = {
       ],
     }, {
       test: /\.(png|svg|jpg|gif)$/,
-      use: [ 'file-loader'],
+      use: [ 'file-loader']
     }]
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
   },
   devServer: {
     contentBase: './dist'

@@ -1,0 +1,11 @@
+@import "../colors";
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background: url('./icon.png') no-repeat right bottom $green;
+  color: $white;
+  &-title {
+    margin: 0;
+  }
+}
