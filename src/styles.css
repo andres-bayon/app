@@ -3,6 +3,6 @@
 $color: #3AC98B;
 
 body {
-  background: $color;
+  background: url('./icon.png') no-repeat top right $color;
   color: #FFFFFF;
 }
