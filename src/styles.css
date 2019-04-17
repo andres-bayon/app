@@ -1,4 +1,8 @@
+@import "./_module.css";
+
+$color: #3AC98B;
+
 body {
-  background: #3AC98B;
+  background: $color;
   color: #FFFFFF;
 }
